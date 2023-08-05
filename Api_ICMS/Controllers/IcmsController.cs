@@ -16,7 +16,7 @@ namespace Api_ICMS.Controllers
             {
                 if ("1234".Contains(cod)) 
                 {
-                    if (valor != 0)
+                    if (valor > 0)
                     {
                         List<Icms> listIcms = new List<Icms>();
                         Icms icms = new Icms();
@@ -91,6 +91,9 @@ namespace Api_ICMS.Controllers
         private double Calcular(double icms, double valor)
         {
             return ((icms / 100) * valor) + valor;
+            // retornar o valor do imposto no objeto
+            // incluir todos valores no log de sucesso
+            // criar o log dentro do catch
         }
     }
 }
