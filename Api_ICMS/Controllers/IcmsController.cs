@@ -3,6 +3,9 @@ using Api_ICMS.Global;
 
 namespace Api_ICMS.Controllers
 {
+    [ApiController]
+    [Route("api/icms")]
+    
     public class IcmsController : Controller
     {
         [HttpGet]

@@ -1,0 +1,29 @@
+--------------------------------------------
+ATIVIDADE - CÁLCULO DE ICMS
+--------------------------------------------
+
+- Criar uma API para retornar o ICMS a ser pago na venda de uma mercadoria.
+- O valor do imposto irá mudar conforme o estado
+
+- Abaixo encontra-se a lista de códigos, estados e alíquotas:
+
+	01 - Acre - 17%
+	02 - Bahia -18%
+	03 - Rondônia - 17,5%
+	04 - Sergipe - 18%
+
+- A API deve disponibilizar um método chamado CalculateICMS
+	* Deve receber por parâmetro: o valor da venda e o código do estado
+	* Deve retornar: o código do estado, o nome do estado, o valor da venda e o valor do imposto
+	* O retorno deve ser um objeto contendo as informações necessárias
+	* Deve conter uma estrutura try-catch
+	* O processamento efetivo do valor deve ser feito em um método não exposto pela API e chamado a partir do método CalculateICMS
+
+- Regras:
+	* O código do estado precisa ser válido
+	* O valor precisa ser válido e maior que zero
+	
+- Logs:
+	* Log de informação em arquivo ao iniciar a API.
+	* Log de sucesso em arquivo contendo todas os dados repassados na requisição caso o método CalculateICMS seja executado corretamente
+	* Log de erro em arquivo em caso de exception (catch) ou violação de alguma das regras
